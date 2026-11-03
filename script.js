@@ -165,26 +165,3 @@ function renderAccordion(sections) {
 }
 
 renderAccordion(SECTIONS);
-
-function initThemeToggle() {
-  const toggle = document.getElementById("theme-toggle");
-  if (!toggle) return;
-
-  const sync = () => {
-    const isLight = document.documentElement.getAttribute("data-theme") === "light";
-    toggle.setAttribute("aria-checked", String(isLight));
-    toggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
-  };
-
-  sync();
-
-  toggle.addEventListener("click", () => {
-    const next =
-      document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-    sync();
-  });
-}
-
-initThemeToggle();
