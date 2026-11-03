@@ -40,7 +40,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 56px;
-  padding: 96px 24px;
+  padding: 48px 24px 96px;
 }
 
 /* Intro (title) */
@@ -354,6 +354,7 @@ body {
 
 @media (min-width: 900px) {
   .page {
+    padding-top: 96px;
     padding-left: var(--grid-margin);
     padding-right: var(--grid-margin);
   }
